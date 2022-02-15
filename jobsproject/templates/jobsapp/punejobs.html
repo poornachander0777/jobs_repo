@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{%static 'css/jobs.css'%}">
+    <style>
+    #s{
+      height: 400px;
+      width: 30%;
+    }
+
+    </style>
+  </head>
+  <body>
+    <h1>Welcome To Pune Jobs Portal.....!!!</h1>
+    <img id='s' src="https://images.unsplash.com/photo-1598090216740-eb040d8c3f82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cHVuZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+    <img src="https://media.istockphoto.com/photos/cityview-picture-id1320749212?b=1&k=20&m=1320749212&s=170667a&w=0&h=FTKJ2ALWqxwl7w2ghbtXylIR1JZMYS6xQe8s2OM3fJg=" alt="">
+    <img id='s' src="https://images.unsplash.com/photo-1608019425630-bec4810ccb60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cHVuZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+    {%if Punejobs_list%}
+    <table border=1>
+      <thead>
+        <th>S.NO</th>
+        <th>CompanyName</th>
+        <th>JobName</th>
+        <th>Qualification</th>
+        <th>Experience</th>
+        <th>Salary</th>
+        <th>ContactNumber</th>
+        <th>Email</th>
+        <th>Address</th>
+      </thead>
+      {%for i in Punejobs_list%}
+      <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.CompanyName}}</td>
+        <td>{{i.JobName}}</td>
+        <td>{{i.Qualification}}</td>
+        <td>{{i.Experience}}</td>
+        <td>{{i.Salary}}</td>
+        <td>{{i.ContactNumber}}</td>
+        <td>{{i.Email}}</td>
+        <td>{{i.Address}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+    {%else%}
+    <h2>Sorry, No Data Found...!!! </h2>
+    {%endif%}
+  </body>
+</html>

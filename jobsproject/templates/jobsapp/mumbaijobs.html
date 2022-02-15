@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{%static 'css/jobs.css'%}">
+  </head>
+  <body>
+    <h1>Welcome To Mumbai Jobs Portal.....!!!</h1>
+    <img src="https://images.unsplash.com/photo-1574565087163-11e46ca637a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fG11bWJhaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqiowVogvZmcJmNv2Mstq6ClpLXAvL6Ai2mQ&usqp=CAU" alt="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFic2sWS-Cwj3MWKdRN-Wki1GXyb5GR8Qf1g&usqp=CAU" alt="">
+    {%if Mumbaijobs_list%}
+    <table border=1>
+      <thead>
+        <th>S.NO</th>
+        <th>CompanyName</th>
+        <th>JobName</th>
+        <th>Qualification</th>
+        <th>Experience</th>
+        <th>Salary</th>
+        <th>ContactNumber</th>
+        <th>Email</th>
+        <th>Address</th>
+      </thead>
+      {%for i in Mumbaijobs_list%}
+      <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.CompanyName}}</td>
+        <td>{{i.JobName}}</td>
+        <td>{{i.Qualification}}</td>
+        <td>{{i.Experience}}</td>
+        <td>{{i.Salary}}</td>
+        <td>{{i.ContactNumber}}</td>
+        <td>{{i.Email}}</td>
+        <td>{{i.Address}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+    {%else%}
+    <h2>Sorry, No Data Found...!!! </h2>
+    {%endif%}
+  </body>
+</html>

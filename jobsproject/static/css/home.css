@@ -1,0 +1,47 @@
+.container{
+  text-align: center;
+  margin-top: 250px;
+}
+h1{
+  font-size: 50px !important;
+  font-family: 'Chakra Petch', sans-serif;
+  border-radius: 50px;
+  color: cyan;
+  background: rgba(0, 0, 0, 0.3);
+  border: solid yellow 1px;
+}
+.jumbotron{
+  border-radius: 40px  !important;
+  background-color: inherit !important;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+body{
+  background: url(https://media.istockphoto.com/photos/textured-dark-vignette-black-background-picture-id675020930?b=1&k=20&m=675020930&s=170667a&w=0&h=ffR2ND9iD6jwBSuf3G_KKKrtd-i89SuMBJpLe-roYb0=);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+a{
+  background: green !important;
+  color: white !important;
+  border-radius: 10px !important;
+  font-weight: 500 !important;
+}
+a:hover{
+  background: red !important;
+  color: yellow !important;
+  font-size: 25px !important;
+}
+p{
+  margin-left: 30%;
+  margin-right: 30%;
+  background: rgb(0,0,0,0.5);
+  border-radius: 50px;
+  color: yellow;
+  font-size: 20px;
+}

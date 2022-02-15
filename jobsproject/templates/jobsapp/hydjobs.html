@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{%static 'css/jobs.css'%}">
+  </head>
+  <body>
+    <h1>Welcome To Hyderabad Jobs Portal.....!!!</h1>
+    <img src="https://media.istockphoto.com/photos/hi-tec-city-building-picture-id471170455?b=1&k=20&m=471170455&s=170667a&w=0&h=xmf4GGA7IABW6SkmuntMHlu4kK8RZo-dCV1X0_piu7s=" alt="">
+    <img src="https://media.istockphoto.com/photos/high-wide-angle-view-of-charminar-in-the-night-picture-id1215274990?b=1&k=20&m=1215274990&s=170667a&w=0&h=XCXrWh91pbG7Bdo_IGuptQOSJa3BWmDIP8Ax9WEpQwY=" alt="">
+    <img src="https://media.istockphoto.com/photos/statue-of-buddha-picture-id825421312?b=1&k=20&m=825421312&s=170667a&w=0&h=JxCQ0BSXaC4t8O8Gfu9t4JARCOiMnAcpSdICNhIZiS4=" alt="">
+    {%if Hydjobs_list%}
+    <table>
+      <thead>
+        <th>S.NO</th>
+        <th>CompanyName</th>
+        <th>JobName</th>
+        <th>Qualification</th>
+        <th>Experience</th>
+        <th>Salary</th>
+        <th>ContactNumber</th>
+        <th>Email</th>
+        <th>Address</th>
+      </thead>
+      {%for i in Hydjobs_list%}
+      <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.CompanyName}}</td>
+        <td>{{i.JobName}}</td>
+        <td>{{i.Qualification}}</td>
+        <td>{{i.Experience}}</td>
+        <td>{{i.Salary}}</td>
+        <td>{{i.ContactNumber}}</td>
+        <td>{{i.Email}}</td>
+        <td>{{i.Address}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+    {%else%}
+    <h2>Sorry, No Data Found...!!! </h2>
+    {%endif%}
+  </body>
+</html>

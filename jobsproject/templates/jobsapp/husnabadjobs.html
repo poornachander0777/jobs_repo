@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{%static 'css/jobs.css'%}">
+    <style>
+    img{
+      margin-left: 50px;
+    }
+    #s{
+      height: 350px;
+      width: 17%;
+      margin: 1.4%;
+    }
+    #hsb{
+      height: 250px;
+      width: 25%;
+    }
+
+    </style>
+  </head>
+  <body>
+    <h1>Welcome To Husnabad Jobs Portal.....!!!</h1>
+    <img id ="s" src="https://img.theweek.in/content/dam/week/magazine/theweek/specials/images/2018/6/1/15-the-martyrs-memorial-then.jpg"  alt="">
+    <img id="hsb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ6xunj-du7xMSiF7b674zr2AiG7LQfK4q6Q&usqp=CAU" alt="">
+    <img id='hsb' src="https://images.news18.com/static_news18/pix/ibnhome/news18/images/five_state_election_2018/telangana/S29A032.jpg" alt="">
+    <img id ="s" src="https://img.theweek.in/content/dam/week/magazine/theweek/specials/images/2018/6/1/15-the-martyrs-memorial-then.jpg" alt="">
+    {%if Husnabadjobs_list%}
+    <table border=1>
+      <thead>
+        <th>S.NO</th>
+        <th>CompanyName</th>
+        <th>JobName</th>
+        <th>Qualification</th>
+        <th>Experience</th>
+        <th>Salary</th>
+        <th>ContactNumber</th>
+        <th>Email</th>
+        <th>Address</th>
+      </thead>
+      {%for i in Husnabadjobs_list%}
+      <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.CompanyName}}</td>
+        <td>{{i.JobName}}</td>
+        <td>{{i.Qualification}}</td>
+        <td>{{i.Experience}}</td>
+        <td>{{i.Salary}}</td>
+        <td>{{i.ContactNumber}}</td>
+        <td>{{i.Email}}</td>
+        <td>{{i.Address}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+    {%else%}
+    <h2>Sorry, No Data Found...!!! </h2>
+    {%endif%}
+  </body>
+</html>
